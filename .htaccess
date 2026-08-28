@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.eksacomercial.cl/$1 [R,L]
+
+</IfModule>
+
+RewriteCond %{HTTP_REFERER} !^http://eksacomercial.cl/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://eksacomercial.cl$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eksacomercial.cl/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eksacomercial.cl$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eksacomercial.cl/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eksacomercial.cl$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eksacomercial.cl/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eksacomercial.cl$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
