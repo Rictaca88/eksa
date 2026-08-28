@@ -1,0 +1,5 @@
+- **Actualizar WIKI**: "Lee lo que hay en RAW/ y construye la wiki en WIKI/ siguiendo las INSTRUCCIONES.md. Actualiza el changelog."
+- **Síntesis**: "Basándote en el wiki, dame los 3 mejores [TEMA]. Guarda la respuesta en OUTPUTS/."
+- **Auditoría**: "Analiza RAW/ y dime cuellos de botella y gaps. Guarda en OUTPUTS/."
+- **Automejora**: "Actualiza INSTRUCCIONES.md con mi contexto personal."
+- **Health Check**: "Revisa la WIKI, detecta contradicciones y sugiere artículos faltantes."
