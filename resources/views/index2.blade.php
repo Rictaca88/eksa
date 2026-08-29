@@ -1315,7 +1315,7 @@
               </div>
             @endif
 
-            <form action="{{ route('contacto') }}" method="POST">
+            <form id="contactForm" action="{{ route('contacto') }}" method="POST">
               @csrf
 
               <div class="form-row">
@@ -1364,12 +1364,23 @@
               </div>
 
               <div class="d-flex justify-content-between align-items-center mt-4">
-                <button type="submit" class="btn-submit-contact">
+                <button type="submit" id="btnSubmitContact" class="btn-submit-contact">
                   <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
                 </button>
                 <span class="text-muted small">* Todos los campos son obligatorios</span>
               </div>
             </form>
+
+            <!-- Loading Spinner State -->
+            <div id="contactLoadingState" style="display: none; text-align: center; padding: 60px 20px;">
+              <div class="spinner-border text-info" role="status" style="width: 3.5rem; height: 3.5rem; border-width: 4px;">
+                <span class="sr-only">Enviando...</span>
+              </div>
+              <h4 class="mt-4 font-weight-bold" style="color: var(--eksa-navy); font-size: 20px;">Enviando tu mensaje...</h4>
+              <p class="text-muted" style="font-size: 14px; max-width: 400px; margin: 10px auto 0; line-height: 1.5;">
+                Estamos registrando tus datos y notificando al equipo comercial de <strong>EKSA</strong>. Por favor espera un momento.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -1460,6 +1471,34 @@
   <script src="{{ url('js/jquery.magnific-popup.min.js') }}"></script>
   <script src="{{ url('js/scrollax.min.js') }}"></script>
   <script src="{{ url('js/main.js') }}"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var contactForm = document.getElementById('contactForm');
+      var contactLoadingState = document.getElementById('contactLoadingState');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          if (this.checkValidity()) {
+            // Ocultar formulario y mostrar spinner
+            contactForm.style.display = 'none';
+            if (contactLoadingState) {
+              contactLoadingState.style.display = 'block';
+            }
+          }
+        });
+      }
+
+      @if(session('success') || session('error') || $errors->any())
+        var contactSec = document.getElementById('contact-section');
+        if (contactSec) {
+          setTimeout(function () {
+            contactSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }
+      @endif
+    });
+  </script>
 
 </body>
 </html>

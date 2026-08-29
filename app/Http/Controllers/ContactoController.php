@@ -56,13 +56,13 @@ class ContactoController extends Controller
                 Log::warning('No se pudo enviar el correo de notificación: ' . $mailError->getMessage());
             }
 
-            return Redirect::route('home')
+            return redirect(route('home') . '#contact-section')
                 ->with('success', '¡Tu mensaje y solicitud de cotización han sido registrados exitosamente! Nos pondremos en contacto a la brevedad.');
 
         } catch (\Exception $e) {
             Log::error('Error al registrar contacto en la base de datos: ' . $e->getMessage());
 
-            return Redirect::route('home')
+            return redirect(route('home') . '#contact-section')
                 ->withInput()
                 ->with('error', 'Ocurrió un inconveniente al registrar tus datos: ' . $e->getMessage());
         }
