@@ -778,6 +778,7 @@
           <li class="nav-item"><a href="#home-section" class="nav-link">Inicio</a></li>
           <li class="nav-item"><a href="#nosotros-section" class="nav-link">Nosotros</a></li>
           <li class="nav-item"><a href="#utilidades-section" class="nav-link">Líneas de Negocio</a></li>
+          <li class="nav-item"><a href="{{ route('industrial') }}" class="nav-link font-weight-bold text-primary"><i class="fa-solid fa-industry mr-1"></i> Industrial</a></li>
           <li class="nav-item"><a href="{{ route('medicinal') }}" class="nav-link font-weight-bold text-info"><i class="fa-solid fa-heart-pulse mr-1"></i> Medicinal</a></li>
           <li class="nav-item"><a href="#sectores-section" class="nav-link">Sectores</a></li>
           <li class="nav-item"><a href="#sucursales-section" class="nav-link">Sucursales</a></li>
@@ -965,14 +966,22 @@
 
         <!-- Card 1: Gases Industriales -->
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="utility-card">
-            <div class="utility-icon-wrap">
+          <div class="utility-card position-relative" style="border: 2px solid rgba(0, 45, 98, 0.25); box-shadow: 0 10px 30px rgba(0, 45, 98, 0.08);">
+            <div class="utility-icon-wrap" style="background: linear-gradient(135deg, var(--eksa-navy), #034b94); color: #fff;">
               <i class="fa-solid fa-industry"></i>
             </div>
-            <h3>Gases Industriales</h3>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h3 class="mb-0">Gases Industriales</h3>
+              <span class="badge badge-primary" style="font-size: 11px; padding: 4px 10px; border-radius: 20px; background-color: var(--eksa-navy);">Línea Productiva</span>
+            </div>
             <p>Los gases industriales son manufacturados con altos estándares de pureza para usos en múltiples aplicaciones técnicas.</p>
             <p>Empleados fundamentalmente en fabricación de acero, soldaduras, oxicorte, fertilizantes y semiconductores.</p>
             <p>Disponibles en distintas formas: gas comprimido en cilindros, estado líquido o recipientes de alta capacidad.</p>
+            <div class="mt-3 pt-3 border-top">
+              <a href="{{ route('industrial') }}" class="btn btn-sm btn-primary font-weight-bold btn-block text-white" style="border-radius: 8px; padding: 9px 16px; background-color: var(--eksa-navy); border-color: var(--eksa-navy); box-shadow: 0 4px 12px rgba(0, 45, 98, 0.25);">
+                <i class="fa-solid fa-industry mr-1"></i> Ver Catálogo Industrial <i class="fa-solid fa-arrow-right ml-1"></i>
+              </a>
+            </div>
           </div>
         </div>
 

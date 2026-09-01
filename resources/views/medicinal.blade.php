@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Gases Medicinales y Soluciones Clínicas - EKSA Chile</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url('img/logo_eksa.jpeg') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Suministro de gases medicinales certificados para hospitales, clínicas, ambulancias y oxigenoterapia domiciliaria en Chile. Oxígeno medicinal, aire medicinal, óxido nitroso y equipamiento clínico.">
 
@@ -189,6 +190,52 @@
       color: #cbd5e1;
       margin-bottom: 30px;
       max-width: 620px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .btn-hero-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 15px;
+      border: none;
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none !important;
+    }
+    .btn-hero-primary:hover {
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5);
+    }
+    .btn-hero-outline {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff !important;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none !important;
+    }
+    .btn-hero-outline:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff !important;
+      border-color: #ffffff;
+      transform: translateY(-2px);
     }
 
     /* Stats Strip */
@@ -520,12 +567,13 @@
       <div class="collapse navbar-collapse" id="navbarMain">
         <ul class="navbar-nav ml-auto align-items-lg-center">
           <li class="nav-item"><a href="{{ route('home') }}" class="nav-link"><i class="fa-solid fa-arrow-left mr-1"></i> Inicio</a></li>
+          <li class="nav-item"><a href="{{ route('industrial') }}" class="nav-link font-weight-bold text-primary"><i class="fa-solid fa-industry mr-1"></i> Industrial</a></li>
           <li class="nav-item"><a href="#catalogo-section" class="nav-link active">Gases Medicinales</a></li>
           <li class="nav-item"><a href="#sectores-med-section" class="nav-link">Sectores Clínicos</a></li>
           <li class="nav-item"><a href="#equipamiento-section" class="nav-link">Equipamiento</a></li>
           <li class="nav-item"><a href="#normativa-section" class="nav-link">Calidad & ISP</a></li>
           <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
-            <a href="#contacto-medicinal" class="btn btn-quote-nav">
+            <a href="#contact-section" class="btn btn-quote-nav">
               <i class="fa-solid fa-paper-plane"></i> Cotizar Línea Médica
             </a>
           </li>
@@ -548,12 +596,12 @@
           <p class="hero-desc-med">
             Suministro continuo de gases grado farmacopea para hospitales, clínicas, servicios de urgencia, ambulancias y oxigenoterapia domiciliaria a lo largo de Chile. Máxima pureza, seguridad y trazabilidad médica.
           </p>
-          <div class="d-flex flex-wrap gap-3" style="gap: 15px;">
-            <a href="#contacto-medicinal" class="btn btn-quote-nav" style="padding: 13px 30px; font-size: 15px;">
-              <i class="fa-solid fa-file-signature"></i> Solicitar Cotización Clínica
+          <div class="hero-actions">
+            <a href="#contact-section" class="btn-hero-primary">
+              <i class="fa-solid fa-file-signature"></i> Solicitar Cotización
             </a>
-            <a href="#catalogo-section" class="btn btn-outline-light" style="border-radius: 30px; padding: 13px 26px; font-weight: 600; font-size: 14px;">
-              <i class="fa-solid fa-flask-vial mr-1"></i> Ver Catálogo de Gases
+            <a href="#catalogo-section" class="btn-hero-outline">
+              <i class="fa-solid fa-cubes"></i> Ver Industrias & Usos
             </a>
           </div>
         </div>
@@ -1121,7 +1169,7 @@
               <strong class="d-block text-white mb-1"><i class="fa-solid fa-location-dot text-info mr-1"></i> San Felipe:</strong>
               <span style="font-size: 13px;">Valle de Aconcagua</span><br>
               <a href="tel:+56972752830" class="text-info font-weight-bold" style="font-size: 13px;">+56 9 7275 2830</a>
-            </div>--}} 
+            </div>--}}
           </div>
           <div class="mt-2">
             <a href="mailto:contacto@eksacomercial.cl" class="text-white" style="font-size: 14px;">

@@ -23,6 +23,10 @@ Route::get('/medicinal', function () {
   return view('medicinal');
 })->name('medicinal');
 
+Route::get('/industrial', function () {
+  return view('industrial');
+})->name('industrial');
+
 //Route::get('/index', function () {
 //  return view('index2');
 //})->name('index');
