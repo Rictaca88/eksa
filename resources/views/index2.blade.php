@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>EKSA - Gases Industriales, Medicinales e Insumos</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url('img/logo_eksa.jpeg') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Distribución y entrega segura de gases industriales, medicinales y criogénicos. Más de 10 años de experiencia. Sucursales en Santiago, San Antonio y San Felipe.">
 
@@ -750,7 +751,7 @@
       </div>
       <div>
         <a href="tel:+56972757988" class="mr-3"><i class="fa-solid fa-phone text-info mr-1"></i> +56 9 7275 7988</a>
-        <a href="mailto:contacto@eksacomercial.cl"><i class="fa-solid fa-envelope text-info mr-1"></i> contacto@eksacomercial.cl</a>
+        <a href="#contact-section"><i class="fa-solid fa-envelope text-info mr-1"></i> contacto@eksa.cl</a>
       </div>
     </div>
   </div>
@@ -1438,15 +1439,15 @@
               <span style="font-size: 13px;">Las Araucarias 9080, Quilicura</span><br>
               <a href="tel:+56972757988" class="text-info font-weight-bold" style="font-size: 13px;">+56 9 7275 7988</a>
             </div>
-            <div class="col-sm-6 mb-3">
+            {{--<div class="col-sm-6 mb-3">
               <strong class="d-block text-white mb-1"><i class="fa-solid fa-location-dot text-info mr-1"></i> San Felipe:</strong>
               <span style="font-size: 13px;">Valle de Aconcagua</span><br>
               <a href="tel:+56972752830" class="text-info font-weight-bold" style="font-size: 13px;">+56 9 7275 2830</a>
-            </div>
+            </div>--}}
           </div>
           <div class="mt-2">
-            <a href="mailto:contacto@eksacomercial.cl" class="text-white" style="font-size: 14px;">
-              <i class="fa-solid fa-envelope text-info mr-1"></i> contacto@eksacomercial.cl
+            <a href="#contact-section" class="text-white" style="font-size: 14px;">
+              <i class="fa-solid fa-envelope text-info mr-1"></i> contacto@eksa.cl
             </a>
           </div>
         </div>
