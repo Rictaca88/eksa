@@ -778,6 +778,7 @@
           <li class="nav-item"><a href="#home-section" class="nav-link">Inicio</a></li>
           <li class="nav-item"><a href="#nosotros-section" class="nav-link">Nosotros</a></li>
           <li class="nav-item"><a href="#utilidades-section" class="nav-link">Líneas de Negocio</a></li>
+          <li class="nav-item"><a href="{{ route('medicinal') }}" class="nav-link font-weight-bold text-info"><i class="fa-solid fa-heart-pulse mr-1"></i> Medicinal</a></li>
           <li class="nav-item"><a href="#sectores-section" class="nav-link">Sectores</a></li>
           <li class="nav-item"><a href="#sucursales-section" class="nav-link">Sucursales</a></li>
           <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
@@ -977,14 +978,22 @@
 
         <!-- Card 2: Gases Medicinales -->
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="utility-card">
-            <div class="utility-icon-wrap">
+          <div class="utility-card position-relative" style="border: 2px solid rgba(14, 165, 233, 0.4); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1);">
+            <div class="utility-icon-wrap" style="background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff;">
               <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <h3>Gases Medicinales</h3>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h3 class="mb-0">Gases Medicinales</h3>
+              <span class="badge badge-info" style="font-size: 11px; padding: 4px 10px; border-radius: 20px;">Línea de Salud</span>
+            </div>
             <p>Gases certificados para consumo humano y soporte vital en instituciones de salud, clínicas, hospitales y pacientes particulares.</p>
             <p>Almacenados y suministrados como gases comprimidos y como líquidos criogénicos (como el Oxígeno líquido clínico).</p>
             <p>Cilindros de acero/aluminio y termos criogénicos con riguroso control de calidad y trazabilidad médica.</p>
+            <div class="mt-3 pt-3 border-top">
+              <a href="{{ route('medicinal') }}" class="btn btn-sm btn-info font-weight-bold btn-block text-white" style="border-radius: 8px; padding: 9px 16px; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);">
+                <i class="fa-solid fa-stethoscope mr-1"></i> Ver Catálogo Medicinal <i class="fa-solid fa-arrow-right ml-1"></i>
+              </a>
+            </div>
           </div>
         </div>
 

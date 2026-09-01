@@ -19,6 +19,10 @@ Route::get('/', function () {
   return view('index2');
 })->name('home');
 
+Route::get('/medicinal', function () {
+  return view('medicinal');
+})->name('medicinal');
+
 //Route::get('/index', function () {
 //  return view('index2');
 //})->name('index');
