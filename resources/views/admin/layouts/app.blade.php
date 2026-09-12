@@ -328,6 +328,42 @@
       box-shadow: 0 6px 16px rgba(14, 165, 233, 0.35);
     }
 
+    /* Paginación */
+    .pagination {
+      margin-bottom: 0;
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 8px;
+      align-items: center;
+    }
+    .pagination svg {
+      width: 14px !important;
+      height: 14px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+      display: inline-block !important;
+      vertical-align: middle;
+    }
+    .page-item.active .page-link {
+      background-color: var(--eksa-navy) !important;
+      border-color: var(--eksa-navy) !important;
+      color: #ffffff !important;
+    }
+    .page-link {
+      color: var(--eksa-navy);
+      border-radius: 6px;
+      margin: 0 2px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+    }
+    .page-link:hover {
+      background-color: #e0f2fe;
+      color: var(--eksa-cyan-hover);
+    }
+
     /* Responsive */
     @media (max-width: 991px) {
       .admin-sidebar {

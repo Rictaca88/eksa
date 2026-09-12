@@ -245,7 +245,7 @@
     <div class="p-4 border-top d-flex justify-content-between align-items-center flex-wrap">
       <small class="text-muted mb-2 mb-sm-0">Página {{ $contactos->currentPage() }} de {{ $contactos->lastPage() }}</small>
       <div>
-        {{ $contactos->links() }}
+        {{ $contactos->appends(request()->query())->links('pagination::bootstrap-4') }}
       </div>
     </div>
   @endif
