@@ -16,6 +16,16 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: 🐘 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, bcmath, fileinfo
+          coverage: none
+
+      - name: 📦 Install Composer Dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader --no-progress --no-interaction
+
       - name: 📂 Sync files via FTPS to Production
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -28,7 +38,6 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-            **/vendor/**
             storage/logs/**
             storage/framework/cache/**
             storage/framework/sessions/**
