@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
 jobs:
   web-deploy:
     name: 🎉 Deploy to Production
@@ -34,6 +38,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           server-dir: public_html/
+          timeout: 600000
           exclude: |
             **/.git*
             **/.git*/**
@@ -47,4 +52,3 @@ jobs:
             tests/**
             .brain/**
             README.md
-
